@@ -1,135 +1,9 @@
+@import "./reset";
 @import "./variabless";
 @import "./animations";
 @import "./font-awesome/font-awesome";
 
-// -------------------------- RESET START -----------------------------------
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-// -------------------------- RESET END -----------------------------------
-
-// ------------------------- FONTS START ----------------------------------
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-Thin.ttf);
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-ThinItalic.ttf);
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-Light.ttf);
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-LightItalic.ttf);
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-Regular.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-Italic.ttf);
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-Medium.ttf);
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-MediumItalic.ttf);
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-Bold.ttf);
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-BoldItalic.ttf);
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-Black.ttf);
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(~fonts/Roboto/Roboto-BlackItalic.ttf);
-  font-weight: 900;
-  font-style: italic;
-}
-// ------------------------- FONTS END ------------------------------------
+@import "./main-header";
 
 // -------------------------- COMMON START --------------------------------
 html, body {
@@ -138,45 +12,93 @@ html, body {
   font-family: Roboto;
 }
 
-.app {
+body {
+  padding: 5rem 0;
+  background-color: #efefef;
+}
+
+.cv {
+  margin: 0 auto;
+  max-width: 120rem;
   height: 100%;
+  font-size: 0;
 }
 
-.clearfix:after, .clearfix:before {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-
-.image-wrapper {
-  text-align: center;
-
-  &:before {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 100%;
-    vertical-align: middle;
-  }
-
-  img {
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100%;
-    vertical-align: middle;
-  }
-}
-
-.col-70 {
+.main-header, .page-wrapper {
   display: inline-block;
-  width: 70%;
+  height: 100%;
+  vertical-align: top;
 }
 
-.col-30 {
-  display: inline-block;
+.main-header {
   width: 30%;
+  padding-right: 2rem;
+}
+
+.main-nav {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #33373d;
+
+  li {
+    position: relative;
+    border-bottom: 1px solid #26292e;
+    text-align: right;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      display: block;
+      padding: 2rem;
+      color: #85878b;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: @main-hover-color;
+        transform: scaleX(0);
+        transition: all 0.4s ease;
+      }
+
+      &:hover {
+        color: white;
+
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+
+      > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      i {
+        float: left;
+        font-size: 2rem;
+        margin-top: -0.3rem;
+      }
+    }
+  }
+}
+
+.avatar {
+  img {
+    width: 100%;
+  }
+}
+
+.page-wrapper {
+  width: 70%;
+  background-color: white;
 }
 
 // -------------------------- COMMON END ----------------------------------
