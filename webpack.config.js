@@ -1,4 +1,5 @@
 // webpack-dev-server --inline --hot --history-api-fallback
+//git add -A && git commit -m "Second commit"
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
