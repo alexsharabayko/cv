@@ -272,4 +272,39 @@ body {
   }
 }
 
+.icons-list {
+  text-align: center;
+
+  &-item {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 3rem;
+    vertical-align: top;
+
+    &__icon {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: @main-hover-color;
+      font-size: 5rem;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      display: inline-block;
+      width: 70%;
+      color: @strong-gray;
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 100;
+      line-height: 1.2;
+    }
+  }
+}
+
 // -------------------------- COMMON END ----------------------------------
