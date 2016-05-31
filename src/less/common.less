@@ -7,7 +7,7 @@
 
 // -------------------------- COMMON START --------------------------------
 html, body {
-  height: 100%;
+  min-height: 100%;
   color: @gray-black;
   font-size: 10px;
   font-family: Roboto;
@@ -141,7 +141,72 @@ body {
 }
 
 .page {
+  &-footer {
+    padding: 3rem;
+    text-align: center;
+    border-top: 1px solid @gray;
 
+    .download-cv,
+    .print-cv {
+      display: inline-block;
+      padding: 1rem 0;
+      margin: 0 2rem;
+      width: 25rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      border: 0.3rem solid;
+
+      i {
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .download-cv {
+      color: white;
+      background-color: @gray-black;
+      border-color: @gray-black;
+      transition: all 0.4s;
+
+      &:hover {
+        background-color: @main-hover-color;
+        border-color: @main-hover-color;
+      }
+    }
+
+    .print-cv {
+      position: relative;
+      border-width: 0;
+      border-bottom-width: 0.3rem;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        left: 0;
+        bottom: -0.3rem;
+        border-left: 0.3rem solid;
+        border-top: 0.3rem solid;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        right: 0;
+        bottom: -0.3rem;
+        border-right: 0.3rem solid;
+        border-top: 0.3rem solid;
+      }
+
+      &:hover {
+        &:before,
+        &:after {
+          animation: button-smart-border 0.4s forwards;
+        }
+      }
+    }
+  }
 }
 
 .section {
