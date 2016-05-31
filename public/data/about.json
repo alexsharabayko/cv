@@ -1,0 +1,126 @@
+{
+  "commonInfo": {
+    "fullName": "Alexander Sharabayko",
+    "position": "Developer",
+    "introWords": "Hi there! I'm highly qualified specialist in program development, with good knowledge and expirience in frontend and server development, math, command work. I like decide complicated and not standard tasks, write clear, extendable and strict code, self-development. Other information about me you can look up at this website or at print version of my cv.",
+    "details": [
+      {
+        "title": "Name",
+        "value": "Alex Sharabayko"
+      },
+      {
+        "title": "Date of birth",
+        "value": "February 17, 1993"
+      },
+      {
+        "title": "Address",
+        "value": "Minsk, Belarus"
+      },
+      {
+        "title": "Email",
+        "value": "alexsharabayko@gmail.com"
+      },
+      {
+        "title": "Phone",
+        "value": "+375292120592"
+      },
+      {
+        "title": "Skype",
+        "value": "alexandr.sharabayko"
+      }
+    ]
+  },
+
+
+  "education": [
+    {
+      "position": "Bachelor Degree",
+      "place": "BSU (Math faculty)",
+      "startDate": "2010",
+      "endDate": "2015",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    {
+      "position": "Lieutenant of reserve",
+      "place": "BSU (Military faculty)",
+      "startDate": "2012",
+      "endDate": "2014",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    }
+  ],
+
+  "expirience": [
+    {
+      "position": "Frontend Developer",
+      "place": "Viaden Media / Skywind Tech By",
+      "startDate": "Sep 2014",
+      "endDate": "current",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    {
+      "position": "Frontend Developer",
+      "place": "Hiqo Solutions",
+      "startDate": "Jul 2013",
+      "endDate": "Aug 2014",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    {
+      "position": "Frontend Developer",
+      "place": "Freelance",
+      "startDate": "2012",
+      "endDate": "2013",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    }
+  ],
+
+  "services": [
+    {
+      "title": "Development",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "wrench"
+    },
+    {
+      "title": "Support",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "life-ring"
+    },
+    {
+      "title": "Team work",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "users"
+    }
+  ],
+
+  "hobbies": [
+    {
+      "title": "Computer science",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "laptop"
+    },
+    {
+      "title": "Books",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "book"
+    },
+    {
+      "title": "Cinema",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "tv"
+    },
+    {
+      "title": "Friends",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "users"
+    },
+    {
+      "title": "Boxing",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "trophy"
+    },
+    {
+      "title": "Cooking",
+      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "icon": "cutlery"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 var BaseView = require('base/base-view');
 var dom = require('lib/dom');
 
-var $pageWrapper = dom('.page-wrapper');
+var $pageContainer = dom('.page-container');
 
 var PageView = BaseView.extend({
     initialize: function () {
@@ -11,7 +11,7 @@ var PageView = BaseView.extend({
     },
 
     append: function () {
-        $pageWrapper.append(this.el);
+        $pageContainer.append(this.el);
     }
 });
 
