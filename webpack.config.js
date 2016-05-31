@@ -29,6 +29,10 @@ module.exports = {
             {
                 test: /\.less$/,
                 loaders: ['style', 'css', 'autoprefixer', 'less']
+            },
+            {
+                test: /\.dot$/,
+                loader: "dot"
             }
         ]
     },
