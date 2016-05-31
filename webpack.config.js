@@ -9,7 +9,7 @@ module.exports = {
     context: __dirname + '/src',
 
     entry: {
-        index: './init'
+        index: './js/init'
     },
 
     output: {
@@ -41,8 +41,11 @@ module.exports = {
     ],
 
     resolve: {
-        modulesDirectories: ['src', 'node_modules'],
-        extensions: ['', '.js', '.less']
+        modulesDirectories: ['js', 'src', 'node_modules'],
+        extensions: ['', '.js', '.less'],
+        alias: {
+            'jquery': 'jbone'
+        }
     },
 
     resolveLoader: {
