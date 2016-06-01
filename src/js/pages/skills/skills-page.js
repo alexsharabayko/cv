@@ -1,24 +1,30 @@
 var PageView = require('base/page-view');
-var CircleProgressBar = require('widgets/progress-bar/circle');
+var dom = require('lib/dom');
+var CircleProgressBar = require('tools/progress-bar/circle');
 
 var SkillsPage = PageView.extend({
     render: function () {
-        this.$el.html(this.tmpl('skills/skills-page'));
+        window.fetch('data/skills.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                this.$el.html(this.tmpl('skills/skills-page', data));
 
-        var c = new CircleProgressBar({
-            color: 'green',
-            size: 400,
-            lineWidth: 10,
-            fontSize: '5rem',
-            fontColor: 'green'
-        });
+                this.$('.circle-progress-bar').map(dom).forEach(function ($elem) {
+                    var c = new CircleProgressBar($elem);
 
-        document.body.innerHTML = '';
-        document.body.appendChild(c.el);
+                    c.start();
+                }, this)
+            }.bind(this));
 
-        setTimeout(function () {
-            c.start();
-        }, 1000);
+        //var c = new CircleProgressBar({
+        //    color: 'green',
+        //    size: 400,
+        //    lineWidth: 10,
+        //    fontSize: '5rem',
+        //    fontColor: 'green'
+        //});
     }
 });
 

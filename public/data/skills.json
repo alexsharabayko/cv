@@ -1,0 +1,28 @@
+{
+  "commonTechSkills": [
+    {
+      "title": "JavaScript",
+      "level": 95
+    },
+    {
+      "title": "HTML",
+      "level": 80
+    },
+    {
+      "title": "CSS",
+      "level": 80
+    },
+    {
+      "title": "Node JS",
+      "level": 60
+    },
+    {
+      "title": "Ruby",
+      "level": 10
+    },
+    {
+      "title": "Other",
+      "level": 5
+    }
+  ]
+}

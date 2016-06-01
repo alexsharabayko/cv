@@ -3,9 +3,13 @@
         <h1 class="section-title">Common Tech Skills</h1>
 
         <ul class="common-tech-skills">
+            {{~it.commonTechSkills:skill}}
             <li class="common-tech-skills-item">
-
+                <div class="circle-progress-bar"
+                      data-percent="{{=skill.level}}" data-color="green" data-font-color="green">123</div>
+                <h4>{{=skill.title}}</h4>
             </li>
+            {{~}}
         </ul>
     </section>
 </div>
