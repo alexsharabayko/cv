@@ -1,5 +1,11 @@
 <div class="page skill-page">
     <section class="section">
-        <h1 class="section-title">Skills</h1>
+        <h1 class="section-title">Common Tech Skills</h1>
+
+        <ul class="common-tech-skills">
+            <li class="common-tech-skills-item">
+
+            </li>
+        </ul>
     </section>
 </div>

@@ -38,7 +38,8 @@
       "place": "BSU (Math faculty)",
       "startDate": "2010",
       "endDate": "2015",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "descriptiou": "Math faculty of BSU - one of the best places to study and grow in Belarus. "
     },
     {
       "position": "Lieutenant of reserve",
@@ -62,31 +63,31 @@
       "place": "Hiqo Solutions",
       "startDate": "Jul 2013",
       "endDate": "Aug 2014",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "I was hired to this company at summer of 2013. Usually I developed not very big websites, using knockout, backbone, sencha, etc. In addition, "
     },
     {
       "position": "Frontend Developer",
       "place": "Freelance",
       "startDate": "2012",
       "endDate": "2013",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "My start point of web development. Freelance work was started by my student course projects, and was finished by commercial projects on backbone, angular, etc."
     }
   ],
 
   "services": [
     {
       "title": "Development",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "A lot of expirience in program development",
       "icon": "wrench"
     },
     {
       "title": "Support",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "A lot of expirience in program support",
       "icon": "life-ring"
     },
     {
       "title": "Team work",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "A lot of expirience in team work",
       "icon": "users"
     }
   ],
@@ -94,32 +95,32 @@
   "hobbies": [
     {
       "title": "Computer science",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "Programming, algorithms, frontend, backend, games",
       "icon": "laptop"
     },
     {
       "title": "Books",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "Science and publicistic books, Dovlatov, Pozner",
       "icon": "book"
     },
     {
       "title": "Cinema",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "Godfather, Breaking Bad and a lot, a lot",
       "icon": "tv"
     },
     {
       "title": "Friends",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "One of the best way to relax and have a good time",
       "icon": "users"
     },
     {
       "title": "Boxing",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "I would like to be like Mike or Floyd))",
       "icon": "trophy"
     },
     {
       "title": "Cooking",
-      "description": "Sed ut perspiciatis unde omnis iste natus error",
+      "description": "Meat, meat, meat, vegetables, fruits, meat, meat",
       "icon": "cutlery"
     }
   ]
