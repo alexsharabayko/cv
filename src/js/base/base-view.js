@@ -1,4 +1,5 @@
 var mvc = require('lib/mvc');
+var CircleProgressBar = require('tools/progress-bar/circle');
 
 var BaseView = mvc.View.extend({
     /**
@@ -13,6 +14,12 @@ var BaseView = mvc.View.extend({
         return template.call({
             tmpl: this.tmpl
         }, data);
+    },
+
+    circleProgressBar: function (className) {
+        this.$(className).forEach(function (elem) {
+            (new CircleProgressBar(elem)).start();
+        });
     }
 });
 

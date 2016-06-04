@@ -17,12 +17,12 @@
       "level": 60
     },
     {
-      "title": "Ruby",
-      "level": 10
+      "title": "Other languages",
+      "level": 40
     },
     {
-      "title": "Other",
-      "level": 5
+      "title": "Algorithms and architecture",
+      "level": 50
     }
   ]
 }

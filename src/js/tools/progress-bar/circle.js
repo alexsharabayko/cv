@@ -1,6 +1,8 @@
-var CircleProgressBar = function ($el) {
-    this.$el = $el;
-    this.el = $el.get(0);
+var dom = require('lib/dom');
+
+var CircleProgressBar = function (el) {
+    this.$el = dom(el);
+    this.el = el;
     this.$el.html(this.template);
 
     this.setOptions();
