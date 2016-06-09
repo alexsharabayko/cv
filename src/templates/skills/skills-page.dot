@@ -5,9 +5,50 @@
         <ul class="common-tech-skills">
             {{~it.commonTechSkills:skill}}
             <li class="common-tech-skills-item">
-                <div class="kk"
+                <div class="fn-common-tech-skills-progress"
                       data-percent="{{=skill.level}}" data-color="#558e6a" data-font-color="#558e6a" data-line-width="10">123</div>
                 <h4>{{=skill.title}}</h4>
+            </li>
+            {{~}}
+        </ul>
+    </section>
+
+    <section class="section">
+        <h1 class="section-title">Languages Skills</h1>
+
+        <ul class="language-skills">
+            {{~it.languageSkills:skill}}
+            <li class="language-skills-item">
+                <h4>{{=skill.title}}</h4>
+
+                <div class="language-skills-progress">
+                    <span class="language-skills-progress__bar"></span>
+                </div>
+            </li>
+            {{~}}
+        </ul>
+    </section>
+
+    <section class="section">
+        <h1 class="section-title">Tools Skills</h1>
+
+        <ul class="tools-skills">
+            {{~it.toolsSkills:skill}}
+            <li class="tools-skills-item">
+                <h4>{{=skill.title}}</h4>
+
+                <ul class="tools-skills-progress">
+                    <li class="tools-skills-progress__item active"></li>
+                    <li class="tools-skills-progress__item active"></li>
+                    <li class="tools-skills-progress__item active"></li>
+                    <li class="tools-skills-progress__item active"></li>
+                    <li class="tools-skills-progress__item active"></li>
+                    <li class="tools-skills-progress__item active"></li>
+                    <li class="tools-skills-progress__item active"></li>
+                    <li class="tools-skills-progress__item"></li>
+                    <li class="tools-skills-progress__item"></li>
+                    <li class="tools-skills-progress__item"></li>
+                </ul>
             </li>
             {{~}}
         </ul>

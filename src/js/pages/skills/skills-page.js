@@ -11,16 +11,8 @@ var SkillsPage = PageView.extend({
             .then(function (data) {
                 this.$el.html(this.tmpl('skills/skills-page', data));
 
-                this.circleProgressBar('.kk');
+                this.circleProgressBar('.fn-common-tech-skills-progress');
             }.bind(this));
-
-        //var c = new CircleProgressBar({
-        //    color: 'green',
-        //    size: 400,
-        //    lineWidth: 10,
-        //    fontSize: '5rem',
-        //    fontColor: 'green'
-        //});
     }
 });
 

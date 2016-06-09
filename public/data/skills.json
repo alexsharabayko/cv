@@ -24,5 +24,35 @@
       "title": "Algorithms and architecture",
       "level": 50
     }
+  ],
+
+  "languageSkills": [
+    {
+      "title": "Russian",
+      "level": 100
+    },
+    {
+      "title": "English",
+      "level": 50
+    }
+  ],
+
+  "toolsSkills": [
+    {
+      "title": "WebStorm",
+      "level": 90
+    },
+    {
+      "title": "Browsers Dev Tools",
+      "level": 90
+    },
+    {
+      "title": "Sublime Text",
+      "level": 90
+    },
+    {
+      "title": "Adobe Photoshop",
+      "level": 50
+    }
   ]
 }

@@ -383,4 +383,47 @@ body {
   }
 }
 
+.language-skills {
+  &-item {
+    font-size: 2rem;
+  }
+
+  &-progress {
+    position: relative;
+    border: 1px solid;
+    height: 1rem;
+    border-radius: 0.5rem;
+
+    &__bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 70%;
+      height: 100%;
+      background-color: black;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+.tools-skills {
+  &-item {
+    font-size: 2rem;
+  }
+
+  &-progress {
+    &__item {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background: black;
+      border-radius: 50%;
+
+      &.active {
+        background-color: @main-hover-color;
+      }
+    }
+  }
+}
+
 // -------------------------- COMMON END ----------------------------------
