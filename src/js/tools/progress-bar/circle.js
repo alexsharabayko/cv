@@ -26,13 +26,12 @@ var CircleProgressBar = BaseProgressBar.extend({
 
         this.canvas.width = this.canvas.height = this.options.size;
         this.ctx.translate(this.options.size / 2, this.options.size / 2);
-        this.ctx.rotate(-0.5 * Math.PI);
+        this.ctx.rotate(-1 * Math.PI);
 
         this.imageData = this.ctx.getImageData(0, 0, this.options.size, this.options.size);
 
         this.$el.css({
-            position: 'relative',
-            display: 'block'
+            position: 'relative'
         });
 
         this.$text.css({
@@ -67,6 +66,14 @@ var CircleProgressBar = BaseProgressBar.extend({
         var ctx = this.ctx;
 
         ctx.putImageData(this.imageData, 0, 0);
+
+        ctx.beginPath();
+        ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2, false);
+        ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+        ctx.lineCap = options.lineCap;
+        ctx.lineWidth = options.lineWidth - 2;
+        ctx.stroke();
+
         ctx.beginPath();
         ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2 * percent / 100, false);
         ctx.strokeStyle = options.color;

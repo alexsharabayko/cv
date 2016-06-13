@@ -2,12 +2,16 @@
     <section class="section">
         <h1 class="section-title">Tech Skills</h1>
 
-        <ul class="common-tech-skills">
+        <ul class="tech-skills">
             {{~it.commonTechSkills:skill}}
-            <li class="common-tech-skills-item">
-                <div class="fn-common-tech-skills-progress"
-                      data-percent="{{=skill.level}}" data-color="#558e6a" data-font-color="#558e6a" data-line-width="10">123</div>
-                <h4 class="common-tech-skills-title">{{=skill.title}}</h4>
+            <li class="tech-skills-item">
+                <div class="tech-skills-title">
+                    <h4>{{=skill.title}}</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+
+                <div class="tech-skills-progress fn-tech-skills-progress"
+                      data-percent="{{=skill.level}}" data-color="#558e6a" data-font-color="#558e6a" data-line-width="5">123</div>
             </li>
             {{~}}
         </ul>

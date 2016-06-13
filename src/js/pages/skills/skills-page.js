@@ -12,7 +12,7 @@ var SkillsPage = PageView.extend({
             .then(function (data) {
                 this.$el.html(this.tmpl('skills/skills-page', data));
 
-                this.$('.fn-common-tech-skills-progress').forEach(function (el) {
+                this.$('.fn-tech-skills-progress').forEach(function (el) {
                     (new CircleProgressBar({ el: el })).start();
                 });
 

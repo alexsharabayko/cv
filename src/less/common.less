@@ -372,24 +372,39 @@ body {
   }
 }
 
-.common-tech-skills {
-  text-align: center;
-
+.tech-skills {
   &-item {
-    display: inline-block;
-    margin: 0 2rem 4rem;
-    width: 25%;
-    vertical-align: top;
-    font-size: 2rem;
+    margin-bottom: 3rem;
   }
 
   &-title {
-    margin-top: 1rem;
-    color: @strong-gray;
-    font-size: 1.8rem;
-    font-style: italic;
-    letter-spacing: 0.1rem;
-    line-height: 1.3;
+    display: inline-block;
+    width: 80%;
+    padding-right: 3rem;
+    vertical-align: top;
+
+    h4 {
+      margin-bottom: 1rem;
+      color: @gray-black;
+      font-size: 2rem;
+      font-style: italic;
+      letter-spacing: 0.1rem;
+    }
+
+    p {
+      color: @strong-gray;
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 100;
+      line-height: 1.4;
+      text-align: justify;
+    }
+  }
+
+  &-progress {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
   }
 }
 
