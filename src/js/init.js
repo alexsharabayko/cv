@@ -5,4 +5,4 @@ requireAll(require.context('img/', true, /\.(ico|png|jpg)$/i));
 
 require('base/base-router');
 
-console.log('Init');
+require('layout/layout-manager');
