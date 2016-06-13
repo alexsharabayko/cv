@@ -15,7 +15,8 @@ var BaseRouter = mvc.Router.extend({
         '': require('pages/home/home-page'),
         default: require('pages/home/home-page'),
         skills: require('pages/skills/skills-page'),
-        portfolio: require('pages/portfolio/portfolio-page')
+        portfolio: require('pages/portfolio/portfolio-page'),
+        contact: require('pages/contact/contact-page')
     },
 
     routes: {

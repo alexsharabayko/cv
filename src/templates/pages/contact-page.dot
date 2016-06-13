@@ -1,0 +1,45 @@
+<div class="page about-page">
+    <section class="section who_i_am">
+        <h1 class="section-title">Map location</h1>
+
+        <div class="contact-map">
+            <div class="contact-map-instance fn-map"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h1 class="section-title">Contact Info</h1>
+
+        <div class="contact-info">
+            <span class="contact-info-icon">
+                <i class="fa fa-map-marker"></i>
+            </span>
+
+            <h5 class="contact-info-text">Minsk, Belarus</h5>
+        </div>
+
+        <div class="contact-info">
+            <a class="contact-info-icon" href="tel:+375292120592">
+                <i class="fa fa-phone"></i>
+            </a>
+
+            <h5 class="contact-info-text">+375 29 2120592</h5>
+        </div>
+
+        <div class="contact-info">
+            <a class="contact-info-icon" href="mailto:alexsharabayko@gmail.com">
+                <i class="fa fa-envelope"></i>
+            </a>
+
+            <h5 class="contact-info-text">alexsharabayko@gmail.com</h5>
+        </div>
+
+        <div class="contact-info">
+            <a class="contact-info-icon" href="skype:alexandr.sharabayko?chat">
+                <i class="fa fa-skype"></i>
+            </a>
+
+            <h5 class="contact-info-text">alexandr.sharabayko</h5>
+        </div>
+    </section>
+</div>
