@@ -7,7 +7,7 @@
             <li class="tech-skills-item">
                 <div class="tech-skills-title">
                     <h4>{{=skill.title}}</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>{{=skill.description}}</p>
                 </div>
 
                 <div class="tech-skills-progress fn-tech-skills-progress"
@@ -23,9 +23,11 @@
         <ul class="language-skills">
             {{~it.languageSkills:skill}}
             <li class="language-skills-item">
-                <h4 class="language-skills-title">{{=skill.title}}</h4>
+                <h4 class="language-skills-title">{{=skill.title}} <span class="small">{{=skill.levelInWords}}</span></h4>
 
                 <div class="language-skills-progress fn-language-skills-progress" data-percent="{{=skill.level}}" data-color="#558e6a"></div>
+
+                <p class="language-skills-description">{{=skill.description}}</p>
             </li>
             {{~}}
         </ul>

@@ -69,7 +69,7 @@ var CircleProgressBar = BaseProgressBar.extend({
 
         ctx.beginPath();
         ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2, false);
-        ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+        ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
         ctx.lineCap = options.lineCap;
         ctx.lineWidth = options.lineWidth - 2;
         ctx.stroke();
