@@ -1,0 +1,52 @@
+<figure class="avatar">
+    <figcaption class="avatar-title">Dwayne Johnson</figcaption>
+
+    <img src="img/the-rock.jpg" alt="avatar"/>
+</figure>
+
+<ul class="main-nav">
+<li class="main-nav-li">
+    <a href="/" class="main-nav-item active">
+        <i class="fa fa-user"></i>
+        <span>About</span>
+    </a>
+</li>
+<li class="main-nav-li">
+    <a href="/skills" class="main-nav-item">
+        <i class="fa fa-gears"></i>
+        <span>Skills</span>
+    </a>
+</li>
+<li class="main-nav-li">
+    <a href="/portfolio" class="main-nav-item">
+        <i class="fa fa-folder"></i>
+        <span>Portfolio</span>
+    </a>
+</li>
+<li class="main-nav-li">
+    <a href="/contact" class="main-nav-item">
+        <i class="fa fa-phone"></i>
+        <span>Contact</span>
+    </a>
+</li>
+</ul>
+
+<ul class="social-links">
+
+<li class="social-links-li">
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+</li>
+<li class="social-links-li">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+</li>
+<li class="social-links-li">
+    <a href="#"><i class="fa fa-twitter"></i></a>
+</li>
+<li class="social-links-li">
+    <a href="#"><i class="fa fa-vk"></i></a>
+</li>
+<li class="social-links-li">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+</li>
+
+</ul>

@@ -1,5 +1,6 @@
 'use strict';
 
+var dom = require('lib/dom');
 var mvc = require('lib/mvc');
 
 /**
@@ -46,5 +47,11 @@ var BaseRouter = mvc.Router.extend({
 // Create instance of router and start history functionality
 var baseRouter = new BaseRouter();
 mvc.history.start({pushState: true});
+
+dom(document.body).on('click', 'a', function (event) {
+    event.preventDefault();
+
+    mvc.history.navigate(event.currentTarget.getAttribute('href'), true);
+});
 
 module.exports = baseRouter;
