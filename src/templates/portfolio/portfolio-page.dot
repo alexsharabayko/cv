@@ -1,0 +1,22 @@
+<div class="page about-page">
+    <section class="section who_i_am">
+        <h1 class="section-title">Portfolio</h1>
+
+        <ul class="portfolio-list">
+            {{~it.projects:project}}
+            <li class="portfolio-list-item">
+                <img class="portfolio-list-item__img" src="{{=project.img}}" alt="portfolio"/>
+
+
+                <a class="portfolio-list-item__overlay" href="{{=project.href}}" target="_blank">
+                    <span class="portfolio-list-item__overlay__center">
+                        <span class="portfolio-list-item__overlay__name">{{=project.name}}</span>
+
+                        <span class="portfolio-list-item__overlay__position">{{=project.position}}</span>
+                    </span>
+                </a>
+            </li>
+            {{~}}
+        </ul>
+    </section>
+</div>

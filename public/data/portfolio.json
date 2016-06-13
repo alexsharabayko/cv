@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "name": "Galabingo.com",
+      "position": "Backbone JS, HTML, CSS",
+      "img": "img/portfolio/1.jpg",
+      "href": "https://www.galabingo.com/"
+    },
+    {
+      "name": "Galacasino.com",
+      "position": "Backbone JS, HTML, CSS",
+      "img": "img/portfolio/1.jpg",
+      "href": "https://www.galacasino.com/"
+    },
+    {
+      "name": "Go Fast",
+      "position": "Angular JS",
+      "img": "img/portfolio/1.jpg",
+      "href": "http://gofast.by/"
+    },
+    {
+      "name": "Hiqo Solutions",
+      "position": "HTML and CSS",
+      "img": "img/portfolio/1.jpg",
+      "href": "http://www.hiqo-solutions.com/"
+    },
+    {
+      "name": "Sport.com",
+      "position": "JS",
+      "img": "img/portfolio/1.jpg",
+      "href": "http://sport.com/"
+    },
+    {
+      "name": "GOT Map",
+      "position": "Leaflet JS",
+      "img": "img/portfolio/1.jpg",
+      "href": "http://viewers-guide.hbo.com/game-of-thrones/season-5/episode-1/map/location/1/ashemark"
+    }
+  ]
+}
