@@ -54,5 +54,11 @@
       "title": "Adobe Photoshop",
       "level": 50
     }
+  ],
+
+  "fraemworks": [
+    {
+      "title": "React JS"
+    }
   ]
 }

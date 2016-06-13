@@ -1,6 +1,6 @@
-var BaseView = require('base/base-view');
+var BaseProgressBar = require('base/progress-bar');
 
-var LinearProgressBar = BaseView.extend({
+var LinearProgressBar = BaseProgressBar.extend({
     template: '<span class="language-skills-progress__bar fn-bar"></span>',
 
     defaultOptions: {
@@ -8,26 +8,6 @@ var LinearProgressBar = BaseView.extend({
         color: 'black',
         duration: 1000,
         animationFunction: 'linear'
-    },
-
-    initialize: function (options) {
-        this.setElement(options.el);
-        this.setOptions();
-
-        this.$el.html(this.template);
-
-        this.setElements();
-        this.setElementsView();
-    },
-
-    setOptions: function () {
-        var data = this.$el.get(0).dataset;
-
-        this.options = {};
-
-        Object.keys(this.defaultOptions).forEach(function (key) {
-            this.options[key] = data[key] || this.defaultOptions[key];
-        }, this);
     },
 
     setElements: function () {

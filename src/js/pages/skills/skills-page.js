@@ -1,5 +1,4 @@
 var PageView = require('base/page-view');
-var dom = require('lib/dom');
 var CircleProgressBar = require('tools/progress-bar/circle');
 var LinearProgressBar = require('tools/progress-bar/linear');
 var PointsProgressBar = require('tools/progress-bar/points');
@@ -13,7 +12,9 @@ var SkillsPage = PageView.extend({
             .then(function (data) {
                 this.$el.html(this.tmpl('skills/skills-page', data));
 
-                this.circleProgressBar('.fn-common-tech-skills-progress');
+                this.$('.fn-common-tech-skills-progress').forEach(function (el) {
+                    (new CircleProgressBar({ el: el })).start();
+                });
 
                 this.$('.fn-language-skills-progress').forEach(function (el) {
                     (new LinearProgressBar({ el: el })).start();

@@ -1,16 +1,6 @@
-var dom = require('lib/dom');
+var BaseProgressBar = require('base/progress-bar');
 
-var CircleProgressBar = function (el) {
-    this.$el = dom(el);
-    this.el = el;
-    this.$el.html(this.template);
-
-    this.setOptions();
-    this.setElements();
-    this.setElementsView();
-};
-
-CircleProgressBar.prototype = {
+var CircleProgressBar = BaseProgressBar.extend({
     template: '<canvas></canvas><span class="text"></span>',
 
     defaultOptions: {
@@ -22,16 +12,6 @@ CircleProgressBar.prototype = {
         fontSize: '2rem',
         fontColor: 'black',
         duration: 1000
-    },
-
-    setOptions: function () {
-        var data = this.$el.get(0).dataset;
-
-        this.options = {};
-
-        Object.keys(this.defaultOptions).forEach(function (key) {
-            this.options[key] = data[key] || this.defaultOptions[key];
-        }, this);
     },
 
     setElements: function () {
@@ -96,6 +76,6 @@ CircleProgressBar.prototype = {
 
         this.$text.html(percent + '%');
     }
-};
+});
 
 module.exports = CircleProgressBar;

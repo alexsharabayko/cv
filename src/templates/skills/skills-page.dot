@@ -1,6 +1,6 @@
 <div class="page skill-page">
     <section class="section">
-        <h1 class="section-title">Common Tech Skills</h1>
+        <h1 class="section-title">Tech Skills</h1>
 
         <ul class="common-tech-skills">
             {{~it.commonTechSkills:skill}}
