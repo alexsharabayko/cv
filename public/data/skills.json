@@ -3,32 +3,38 @@
     {
       "title": "JavaScript",
       "level": 95,
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "Majority of my experience consist of writing javascript code. I have experience both in vanilla js and in most popular javascript fraemworks and libraries.",
+      "keywords": "Vanilla JS, Backbone JS, React JS, Angular JS, jQuery, Underscore"
     },
     {
       "title": "HTML",
       "level": 80,
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "I have experience in work with html4 and html5 standards. I know about valid and semantic html code. I worked both with simple html and with template engines.",
+      "keywords": "HTML5, Handlebars, Dot js, Validity, Semantic"
     },
     {
       "title": "CSS",
       "level": 80,
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "I had a lot of tasks in CSS. I like preprocessors and usual CSS. I know about selectors priority and most popular css methodologies",
+      "keywords": "CSS3, Less, Sass, autoprefixer, postcss, BEM"
     },
     {
       "title": "Node JS",
       "level": 60,
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "There is a big experience in developing server side applications using Node js. For example: rest web services, authentification and registartion module and so on. Also there is experience in work with NoSQL databases such as Mongo db.",
+      "keywords": "Node, Node express, Mongo DB, Mongoose, Webpack, Gulp, NWJS"
     },
     {
       "title": "Other languages",
       "level": 50,
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "I have worked with sql-lite syntax and also with no-sql databases. Also a have some small experience in ruby, c# and java.",
+      "keywords": "SQL, Ruby, C#"
     },
     {
       "title": "Algorithms and architecture",
       "level": 70,
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "Have big experience in building big single page web applications: how to build architecture, how to create extendable and pure methods, where and when better to user some design pattern and so on. Alse I use McConnel's advices to programming my applications.",
+      "keywords": "REST, MVC, MVVM, Redux, Design Patterns, Best Practics"
     }
   ],
 
@@ -37,13 +43,13 @@
       "title": "Russian",
       "level": 100,
       "levelInWords": "Native",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": "It is an East Slavic language and an official language in Russia, Belarus, Kazakhstan, Kyrgyzstan and many minor or unrecognised territories. It is an unofficial but widely-spoken language in Ukraine, Latvia, Estonia, and to a lesser extent, the other countries that were once constituent republics of the Soviet Union and former participants of the Eastern Bloc."
     },
     {
       "title": "English",
       "level": 50,
       "levelInWords": "Intermediate",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      "description": " English is either the official language or an official language in almost 60 sovereign states. It is the most commonly spoken language in the United Kingdom, the United States, Canada, Australia, Ireland, and New Zealand, and it is widely spoken in some areas of the Caribbean, Africa, and South Asia."
     }
   ],
 

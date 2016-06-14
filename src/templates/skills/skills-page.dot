@@ -6,8 +6,13 @@
             {{~it.commonTechSkills:skill}}
             <li class="tech-skills-item">
                 <div class="tech-skills-title">
-                    <h4>{{=skill.title}}</h4>
-                    <p>{{=skill.description}}</p>
+                    <h4 class="tech-skills-title__name">{{=skill.title}}</h4>
+                    <p class="tech-skills-title__description">{{=skill.description}}</p>
+
+                    <div class="tech-skills-title__keywords">
+                        <span class="tech-skills-title__keywords__label">Keywords</span>
+                        <span class="tech-skills-title__keywords__text">{{=skill.keywords}}</span>
+                    </div>
                 </div>
 
                 <div class="tech-skills-progress fn-tech-skills-progress"
