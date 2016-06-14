@@ -1,6 +1,11 @@
 var BaseView = require('base/base-view');
+var mvc = require('lib/mvc');
 
 var MainHeader = BaseView.extend({
+    events: {
+        'click .fn-nav-item': 'navigate'
+    },
+
     initialize: function () {
         this.render();
     },
@@ -14,6 +19,20 @@ var MainHeader = BaseView.extend({
                 this.$el.html(this.tmpl('layout/main-header', data));
             }.bind(this));
 
+    },
+
+    navigate: function (event) {
+        event.preventDefault();
+
+        mvc.history.navigate(event.currentTarget.getAttribute('href'), true);
+
+        this.setItemActiveClass(event.currentTarget);
+    },
+
+    setItemActiveClass: function (target) {
+        this.$('.fn-nav-item').removeClass('active');
+
+        target.classList.add('active');
     }
 });
 

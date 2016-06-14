@@ -48,10 +48,4 @@ var BaseRouter = mvc.Router.extend({
 var baseRouter = new BaseRouter();
 mvc.history.start({pushState: true});
 
-dom(document.body).on('click', 'a', function (event) {
-    event.preventDefault();
-
-    mvc.history.navigate(event.currentTarget.getAttribute('href'), true);
-});
-
 module.exports = baseRouter;

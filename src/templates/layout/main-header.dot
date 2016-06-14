@@ -6,25 +6,25 @@
 
 <ul class="main-nav">
     <li class="main-nav-li">
-        <a href="/" class="main-nav-item active">
+        <a href="/" class="main-nav-item fn-nav-item active">
             <i class="fa fa-user"></i>
             <span>About</span>
         </a>
     </li>
     <li class="main-nav-li">
-        <a href="/skills" class="main-nav-item">
+        <a href="/skills" class="main-nav-item fn-nav-item">
             <i class="fa fa-gears"></i>
             <span>Skills</span>
         </a>
     </li>
     <li class="main-nav-li">
-        <a href="/portfolio" class="main-nav-item">
+        <a href="/portfolio" class="main-nav-item fn-nav-item">
             <i class="fa fa-folder"></i>
             <span>Portfolio</span>
         </a>
     </li>
     <li class="main-nav-li">
-        <a href="/contact" class="main-nav-item">
+        <a href="/contact" class="main-nav-item fn-nav-item">
             <i class="fa fa-phone"></i>
             <span>Contact</span>
         </a>
