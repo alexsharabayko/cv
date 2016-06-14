@@ -38,19 +38,19 @@
     },
     {
       "name": "Node js projects",
-      "position": "HTML and CSS",
+      "position": "Node js, Mongodb, Express",
       "img": "img/portfolio/node.jpg",
       "href": "https://nodejs.org/en/"
     },
     {
       "name": "Freelance",
-      "position": "JS",
+      "position": "HTML, CSS, JS, Node JS",
       "img": "img/portfolio/freelance.jpg",
       "href": "http://www.freelance.com/en/"
     },
     {
       "name": "Look at me widgets",
-      "position": "Leaflet JS",
+      "position": "HTML, CSS, JS",
       "img": "img/portfolio/look.jpg",
       "href": "http://www.lookatme.ru/"
     }
