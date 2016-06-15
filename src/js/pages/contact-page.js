@@ -14,17 +14,10 @@ var ContactPage = PageView.extend({
         zoom: 11
     },
 
-    render: function () {
-        //window.fetch('data/about.json')
-        //    .then(function (response) {
-        //        return response.json();
-        //    })
-        //    .then(function (data) {
-        //        this.$el.html(this.tmpl('about/about-page', data));
-        //    }.bind(this));
-        this.$el.html(this.tmpl('pages/contact-page'));
+    initialize: function () {
+        PageView.prototype.initialize.apply(this, arguments);
 
-        this.renderContactMap();
+        this.listenToOnce(this, 'mounted', this.renderContactMap.bind(this));
     },
 
     renderContactMap: function () {

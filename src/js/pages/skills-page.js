@@ -10,10 +10,10 @@ var SkillsPage = PageView.extend({
     initialize: function () {
         PageView.prototype.initialize.apply(this, arguments);
 
-        this.listenTo(this, 'mounted', this.gogo.bind(this));
+        this.listenToOnce(this, 'mounted', this.runProgresses.bind(this));
     },
 
-    gogo: function () {
+    runProgresses: function () {
         this.$('.fn-tech-skills-progress').forEach(function (el) {
             (new CircleProgressBar({ el: el })).start();
         });
