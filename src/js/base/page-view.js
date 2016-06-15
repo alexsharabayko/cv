@@ -7,10 +7,8 @@ var PageView = BaseView.extend({
     initialize: function () {
         BaseView.prototype.initialize.apply(this, arguments);
 
-        this.render();
+        this.renderAfterFetch();
     },
-
-    render: this.renderAfterFetch,
 
     append: function () {
         $pageContainer.append(this.el);

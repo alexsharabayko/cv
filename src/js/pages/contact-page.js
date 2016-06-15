@@ -1,6 +1,9 @@
 var PageView = require('base/page-view');
 
 var ContactPage = PageView.extend({
+    template: 'pages/contact-page',
+    url: 'data/about.json',
+
     googleMapsApiSrc: 'https://maps.googleapis.com/maps/api/js',
 
     googleMapOptions: {

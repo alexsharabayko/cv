@@ -15,19 +15,27 @@
       },
       {
         "title": "Address",
-        "value": "Minsk, Belarus"
+        "value": "Minsk, Belarus",
+        "contact": true,
+        "contactIcon": "map-marker"
       },
       {
         "title": "Email",
-        "value": "alexsharabayko@gmail.com"
+        "value": "alexsharabayko@gmail.com",
+        "contact": true,
+        "contactIcon": "envelope"
       },
       {
         "title": "Phone",
-        "value": "+375292120592"
+        "value": "+375292120592",
+        "contact": true,
+        "contactIcon": "phone"
       },
       {
         "title": "Skype",
-        "value": "alexandr.sharabayko"
+        "value": "alexandr.sharabayko",
+        "contact": true,
+        "contactIcon": "skype"
       }
     ]
   },
