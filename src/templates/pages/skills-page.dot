@@ -10,7 +10,7 @@
                     <p class="tech-skills-title__description">{{=skill.description}}</p>
 
                     <div class="tech-skills-title__keywords">
-                        <span class="tech-skills-title__keywords__label">Keywords</span>
+                        <span class="tech-skills-title__keywords__label">Keywords:</span>
                         <span class="tech-skills-title__keywords__text">{{=skill.keywords}}</span>
                     </div>
                 </div>
@@ -44,9 +44,9 @@
         <ul class="tools-skills">
             {{~it.toolsSkills:skill}}
             <li class="tools-skills-item">
-                <ul class="tools-skills-progress fn-tools-skills-progress" data-percent="{{=skill.level}}" data-color="#558e6a"></ul>
-
                 <h4 class="tools-skills-title">{{=skill.title}}</h4>
+
+                <ul class="tools-skills-progress fn-tools-skills-progress" data-percent="{{=skill.level}}" data-color="#558e6a"></ul>
             </li>
             {{~}}
         </ul>

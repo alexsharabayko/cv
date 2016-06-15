@@ -29,10 +29,11 @@
 
     &__keywords {
       font-size: 1.6rem;
+      line-height: 1.5;
 
       &__label {
         display: inline-block;
-        padding: 0.4rem 1rem;
+        padding: 0 1rem;
         margin-right: 0.5rem;
         color: white;
         font-style: italic;
@@ -109,14 +110,25 @@
   }
 
   &-title {
+    float: left;
     color: @strong-gray;
     font-size: 1.8rem;
     font-style: italic;
     letter-spacing: 0.1rem;
+
+    @media @mobile {
+      float: none;
+      margin-bottom: 1rem;
+    }
   }
 
   &-progress {
     float: right;
+
+    @media @mobile {
+      float: none;
+      margin-left: -0.5rem;
+    }
 
     &__item {
       display: inline-block;

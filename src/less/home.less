@@ -31,8 +31,11 @@
     font-size: 1.6rem;
     text-align: center;
 
-    &__tr {
+    @media @mobile {
+      border-bottom: 0.1rem solid @gray;
+    }
 
+    &__tr {
     }
 
     &__th,
@@ -40,6 +43,12 @@
       padding: 1rem;
       width: 50%;
       border: 0.1rem solid @gray;
+
+      @media @mobile {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+      }
     }
 
     &__th {
