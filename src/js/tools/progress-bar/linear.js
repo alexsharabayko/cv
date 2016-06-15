@@ -18,12 +18,19 @@ var LinearProgressBar = BaseProgressBar.extend({
         var options = this.options;
 
         this.$el.css({
-            'border-color': options.color
+            'position': 'relative',
+            'border': '0.2rem solid ' + options.color,
+            'height': '1.5rem',
+            'border-radius': '0.75rem'
         });
 
         this.$bar.css({
-            'background-color': options.color,
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            height: '100%',
             width: 0,
+            'background-color': options.color,
             'transition': 'width ' + (options.duration / 1000) + 's ' + options.animationFunction,
             '-webkit-transition': 'width ' + (options.duration / 1000) + 's ' + options.animationFunction
         });
