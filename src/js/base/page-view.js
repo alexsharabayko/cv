@@ -8,10 +8,6 @@ var PageView = BaseView.extend({
         BaseView.prototype.initialize.apply(this, arguments);
 
         this.renderAfterFetch();
-
-        this.listenToOnce(this, 'rendered', function () {
-            this._rendered = true;
-        }.bind(this));
     },
 
     append: function () {

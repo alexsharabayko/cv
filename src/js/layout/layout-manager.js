@@ -1,7 +1,12 @@
 var dom = require('lib/dom');
 var MainHeader = require('layout/main-header');
 
-var a = new MainHeader();
+var mainHeader = new MainHeader();
 
-dom('.fn-main-header').append(a.el);
+dom('.fn-main-header').append(mainHeader.el);
 
+module.exports = {
+    updateMainNav: function (path) {
+        mainHeader.updateNav(path);
+    }
+};

@@ -19,6 +19,8 @@ var BaseView = mvc.View.extend({
     },
 
     renderAfterFetch: function () {
+        this._rendered = false;
+
         return window.fetch(this.url)
             .then(function (response) {
                 return response.json();
@@ -27,6 +29,7 @@ var BaseView = mvc.View.extend({
                 this.$el.html(this.tmpl(this.template, data));
 
                 this.trigger('rendered');
+                this._rendered = true;
             }.bind(this));
     }
 });

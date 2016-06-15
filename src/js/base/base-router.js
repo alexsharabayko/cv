@@ -1,6 +1,7 @@
 'use strict';
 
 var mvc = require('lib/mvc');
+var layoutManager = require('layout/layout-manager');
 
 var HomePage = require('pages/home-page');
 var SkillsPage = require('pages/skills-page');
@@ -50,6 +51,8 @@ var BaseRouter = mvc.Router.extend({
         var newPage = this.pages[pageKey] || this.pages.default;
 
         this.showPage(newPage);
+
+        layoutManager.updateMainNav(pageKey);
     }
 });
 
