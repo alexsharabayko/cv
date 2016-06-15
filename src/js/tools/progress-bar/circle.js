@@ -28,6 +28,8 @@ var CircleProgressBar = BaseProgressBar.extend({
         this.ctx.translate(this.options.size / 2, this.options.size / 2);
         this.ctx.rotate(-1 * Math.PI);
 
+        this.imageData = this.ctx.getImageData(0, 0, this.options.size, this.options.size);
+
         this.$el.css({
             position: 'relative'
         });
@@ -48,22 +50,23 @@ var CircleProgressBar = BaseProgressBar.extend({
         var interval = this.options.duration / this.options.percent;
         var currentPercent = 1;
 
-        this.timeout = window.setTimeout(this.ticker.bind(this, interval, currentPercent), interval);
+        window.setTimeout(this.ticker.bind(this, interval, currentPercent), interval);
     },
 
     ticker: function (interval, currentPercent) {
         this.drawCircle(currentPercent++);
 
         if (currentPercent <= parseInt(this.options.percent, 10)) {
-            this.timeout = window.setTimeout(this.ticker.bind(this, interval, currentPercent), interval);
+            window.setTimeout(this.ticker.bind(this, interval, currentPercent), interval);
         }
     },
 
     drawCircle: function (percent) {
         var options = this.options;
+        var canvas = this.canvas;
         var ctx = this.ctx;
 
-        ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        ctx.putImageData(this.imageData, 0, 0);
 
         ctx.beginPath();
         ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2, false);
@@ -71,6 +74,7 @@ var CircleProgressBar = BaseProgressBar.extend({
         ctx.lineCap = options.lineCap;
         ctx.lineWidth = options.lineWidth - 2;
         ctx.stroke();
+        ctx.closePath();
 
         ctx.beginPath();
         ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2 * percent / 100, false);
@@ -78,6 +82,7 @@ var CircleProgressBar = BaseProgressBar.extend({
         ctx.lineCap = options.lineCap;
         ctx.lineWidth = options.lineWidth;
         ctx.stroke();
+        ctx.closePath();
 
         this.$text.html(percent + '%');
     }

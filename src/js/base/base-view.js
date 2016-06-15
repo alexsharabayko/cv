@@ -26,7 +26,7 @@ var BaseView = mvc.View.extend({
             .then(function (data) {
                 this.$el.html(this.tmpl(this.template, data));
 
-                this.$el.trigger('rendered');
+                this.trigger('rendered');
             }.bind(this));
     }
 });

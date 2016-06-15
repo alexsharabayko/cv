@@ -8,10 +8,22 @@ var PageView = BaseView.extend({
         BaseView.prototype.initialize.apply(this, arguments);
 
         this.renderAfterFetch();
+
+        this.listenToOnce(this, 'rendered', function () {
+            this._rendered = true;
+        }.bind(this));
     },
 
     append: function () {
         $pageContainer.append(this.el);
+
+        if (this._rendered) {
+            this.trigger('mounted');
+        } else {
+            this.listenToOnce(this, 'rendered', function () {
+                this.trigger('mounted');
+            }.bind(this));
+        }
     }
 });
 

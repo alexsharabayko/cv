@@ -7,22 +7,24 @@ var SkillsPage = PageView.extend({
     template: 'pages/skills-page',
     url: 'data/skills.json',
 
-    events: {
-        'rendered': 'gogo'
+    initialize: function () {
+        PageView.prototype.initialize.apply(this, arguments);
+
+        this.listenTo(this, 'mounted', this.gogo.bind(this));
     },
 
     gogo: function () {
-        //this.$('.fn-tech-skills-progress').forEach(function (el) {
-        //    (new CircleProgressBar({ el: el })).start();
-        //});
-        //
-        //this.$('.fn-language-skills-progress').forEach(function (el) {
-        //    (new LinearProgressBar({ el: el })).start();
-        //});
-        //
-        //this.$('.fn-tools-skills-progress').forEach(function (el) {
-        //    (new PointsProgressBar({ el: el })).start();
-        //});
+        this.$('.fn-tech-skills-progress').forEach(function (el) {
+            (new CircleProgressBar({ el: el })).start();
+        });
+
+        this.$('.fn-language-skills-progress').forEach(function (el) {
+            (new LinearProgressBar({ el: el })).start();
+        });
+
+        this.$('.fn-tools-skills-progress').forEach(function (el) {
+            (new PointsProgressBar({ el: el })).start();
+        });
     }
 });
 
