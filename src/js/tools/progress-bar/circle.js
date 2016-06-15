@@ -14,6 +14,12 @@ var CircleProgressBar = BaseProgressBar.extend({
         duration: 1000
     },
 
+    initialize: function () {
+        BaseProgressBar.prototype.initialize.apply(this, arguments);
+
+
+    },
+
     setElements: function () {
         this.canvas = this.el.querySelector('canvas');
         this.ctx = this.canvas.getContext('2d');
@@ -85,7 +91,29 @@ var CircleProgressBar = BaseProgressBar.extend({
         ctx.closePath();
 
         this.$text.html(percent + '%');
+    },
+
+    refreshOnResize: function () {
+        this.setElementsView();
+        this.drawCircle(this.options.percent);
     }
+
+    //delegateEvents: function () {
+    //    dom(window).on('resize.resize-circle-progress', function () {
+    //        this.setElementsView();
+    //        this.drawCircle();
+    //    }.bind(this));
+    //
+    //    this.listenTo(dom());
+    //
+    //    BaseProgressBar.prototype.delegateEvents.apply(this, arguments);
+    //},
+    //
+    //undelegateEvents: function () {
+    //    dom(window).off('resize.resize-circle-progress');
+    //
+    //    BaseProgressBar.prototype.undelegateEvents.apply(this, arguments);
+    //}
 });
 
 module.exports = CircleProgressBar;
