@@ -1,7 +1,18 @@
 'use strict';
 
-var dom = require('lib/dom');
 var mvc = require('lib/mvc');
+
+var HomePage = require('pages/home-page');
+var SkillsPage = require('pages/skills-page');
+var PortfolioPage = require('pages/portfolio-page');
+var ContactPage = require('pages/contact-page');
+
+var pages = {
+    home: new HomePage(),
+    skill: new SkillsPage(),
+    portfolio: new PortfolioPage(),
+    contact: new ContactPage()
+};
 
 /**
  * Base router
@@ -13,34 +24,32 @@ var BaseRouter = mvc.Router.extend({
     currentPage: null,
 
     pages: {
-        '': require('pages/home/home-page'),
-        default: require('pages/home/home-page'),
-        skills: require('pages/skills/skills-page'),
-        portfolio: require('pages/portfolio/portfolio-page'),
-        contact: require('pages/contact/contact-page')
+        '': pages.home,
+        default: pages.home,
+        skills: pages.skill,
+        portfolio: pages.portfolio,
+        contact: pages.contact
     },
 
     routes: {
         '*route': 'routeHandler'
     },
 
-    showPage: function (PageClass) {
+    showPage: function (newPage) {
         var currentPage = this.currentPage;
-
-        var page = new PageClass();
 
         currentPage && currentPage.remove();
 
-        page.append();
+        newPage.append();
 
-        this.currentPage = page;
+        this.currentPage = newPage;
     },
 
     routeHandler: function (path) {
         var pageKey = path || '';
-        var PageClass = this.pages[pageKey] || this.pages.default;
+        var newPage = this.pages[pageKey] || this.pages.default;
 
-        this.showPage(PageClass);
+        this.showPage(newPage);
     }
 });
 

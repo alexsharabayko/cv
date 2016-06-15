@@ -1,6 +1,9 @@
 var mvc = require('lib/mvc');
 
 var BaseView = mvc.View.extend({
+    template: null,
+    url: null,
+
     /**
      * Return DoT template by template name or only template name
      * @param {String} templateName
@@ -13,6 +16,18 @@ var BaseView = mvc.View.extend({
         return template.call({
             tmpl: this.tmpl
         }, data);
+    },
+
+    renderAfterFetch: function () {
+        return window.fetch(this.url)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                this.$el.html(this.tmpl(this.template, data));
+
+                this.$el.trigger('rendered');
+            }.bind(this));
     }
 });
 

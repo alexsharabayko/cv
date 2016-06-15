@@ -28,8 +28,6 @@ var CircleProgressBar = BaseProgressBar.extend({
         this.ctx.translate(this.options.size / 2, this.options.size / 2);
         this.ctx.rotate(-1 * Math.PI);
 
-        this.imageData = this.ctx.getImageData(0, 0, this.options.size, this.options.size);
-
         this.$el.css({
             position: 'relative'
         });
@@ -65,7 +63,7 @@ var CircleProgressBar = BaseProgressBar.extend({
         var options = this.options;
         var ctx = this.ctx;
 
-        ctx.putImageData(this.imageData, 0, 0);
+        ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
         ctx.beginPath();
         ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2, false);

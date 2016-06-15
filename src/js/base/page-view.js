@@ -10,6 +10,8 @@ var PageView = BaseView.extend({
         this.render();
     },
 
+    render: this.renderAfterFetch,
+
     append: function () {
         $pageContainer.append(this.el);
     }
