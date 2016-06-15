@@ -14,10 +14,6 @@ html, body {
   color: @gray-black;
   font-size: 10px;
   font-family: Roboto;
-
-  @media @mobile {
-    //font-size: 14px;
-  }
 }
 
 body {
@@ -26,6 +22,10 @@ body {
 
   @media @mobile {
     padding: 0;
+  }
+
+  @media @tablet {
+    padding: 2rem;
   }
 }
 
@@ -44,6 +44,10 @@ body {
   @media @mobile {
     display: block;
   }
+
+  @media @tablet {
+    display: block;
+  }
 }
 
 .main-header {
@@ -51,6 +55,11 @@ body {
   padding-right: 2rem;
 
   @media @mobile {
+    width: auto;
+    padding-right: 0;
+  }
+
+  @media @tablet {
     width: auto;
     padding-right: 0;
   }
@@ -74,6 +83,18 @@ body {
       font-size: 0;
       text-align: center;
       border: none;
+    }
+
+    @media @tablet {
+      display: inline-block;
+      width: 25%;
+      vertical-align: top;
+      border-bottom: none;
+      border-right: 0.1rem solid #26292e;
+
+      &:last-child {
+        border-right: none;
+      }
     }
 
     &:last-child {
@@ -177,6 +198,10 @@ body {
   background-color: white;
 
   @media @mobile {
+    width: auto;
+  }
+
+  @media @tablet {
     width: auto;
   }
 }
