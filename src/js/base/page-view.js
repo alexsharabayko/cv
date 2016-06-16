@@ -8,10 +8,14 @@ var PageView = BaseView.extend({
         BaseView.prototype.initialize.apply(this, arguments);
 
         this.renderAfterFetch();
+
+        this.undelegateEvents();
     },
 
     append: function () {
         $pageContainer.append(this.el);
+
+        this.delegateEvents();
 
         if (this._rendered) {
             this.trigger('mounted');
@@ -20,6 +24,12 @@ var PageView = BaseView.extend({
                 this.trigger('mounted');
             }.bind(this));
         }
+    },
+
+    remove: function () {
+        BaseView.prototype.remove.apply(this, arguments);
+
+        this.undelegateEvents();
     }
 });
 
