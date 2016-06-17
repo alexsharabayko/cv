@@ -1,5 +1,5 @@
 <div class="page about-page">
-    <section class="section who_i_am">
+    <section class="section who_i_am fn-section">
         <h1 class="section-title">Who i am</h1>
 
         <h2 class="who_i_am-title">
@@ -21,7 +21,7 @@
         </table>
     </section>
 
-    <section class="section">
+    <section class="section fn-section">
         <h2 class="section-title">Education</h2>
 
         <ul class="exp-list">
@@ -48,7 +48,7 @@
         </ul>
     </section>
 
-    <section class="section">
+    <section class="section fn-section">
         <h2 class="section-title">Experience</h2>
 
         <ul class="exp-list">
@@ -75,7 +75,7 @@
         </ul>
     </section>
 
-    <section class="section">
+    <section class="section fn-section">
         <h1 class="section-title">Services</h1>
 
         <ul class="icons-list">
@@ -89,7 +89,7 @@
         </ul>
     </section>
 
-    <section class="section">
+    <section class="section fn-section">
         <h1 class="section-title">Hobbies</h1>
 
         <ul class="icons-list">
