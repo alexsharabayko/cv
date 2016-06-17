@@ -21,6 +21,8 @@ var BaseView = mvc.View.extend({
     renderAfterFetch: function () {
         this._rendered = false;
 
+        this.$el.html('<span class="loading">Loading</span>');
+
         return window.fetch(this.url)
             .then(function (response) {
                 return response.json();

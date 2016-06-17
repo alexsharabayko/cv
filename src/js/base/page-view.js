@@ -17,6 +17,16 @@ var PageView = BaseView.extend({
 
         this.delegateEvents();
 
+        this._triggerMountedEvent();
+    },
+
+    remove: function () {
+        BaseView.prototype.remove.apply(this, arguments);
+
+        this.undelegateEvents();
+    },
+
+    _triggerMountedEvent: function () {
         if (this._rendered) {
             this.trigger('mounted');
         } else {
@@ -26,10 +36,18 @@ var PageView = BaseView.extend({
         }
     },
 
-    remove: function () {
-        BaseView.prototype.remove.apply(this, arguments);
+    delegateEvents: function () {
+        BaseView.prototype.delegateEvents.apply(this, arguments);
 
-        this.undelegateEvents();
+        dom(window).on('scroll' + '.scroll' + this.cid, function () {
+            console.log(22);
+        });
+    },
+
+    undelegateEvents: function () {
+        BaseView.prototype.undelegateEvents.apply(this, arguments);
+
+        dom(window).off('scroll' + '.scroll' + this.cid);
     }
 });
 
