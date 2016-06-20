@@ -89,6 +89,17 @@
     transform: translate(200%, 0);
     transition: all @icons-list-animation-time;
 
+    &.visible {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    &:hover {
+      .exp-list-item__title:before {
+        transform: scale(1.5);
+      }
+    }
+
     &__title {
       position: relative;
       margin-bottom: 1rem;
@@ -102,6 +113,7 @@
         background-color: @main-hover-color;
         border: 0.2rem solid white;
         border-radius: 50%;
+        transition: all @icons-list-animation-time;
       }
     }
 
@@ -139,6 +151,11 @@
     opacity: 0;
     transform: translate(0, 200%);
     transition: all @icons-list-animation-time;
+
+    &.visible {
+      opacity: 1;
+      transform: translate(0);
+    }
 
     &:hover {
       transform: scale(1.2);
@@ -178,37 +195,3 @@
     }
   }
 }
-
-//.visible {
-//  .exp-list {
-//    &-item {
-//      animation: fadeOnRightLeft @exp-list-animation-time ease-in-out forwards;
-//    }
-//  }
-//
-//  .icons-list {
-//    &-item {
-//      animation: fadeOnBottomTop @icons-list-animation-time ease-in-out forwards;
-//    }
-//  }
-//}
-//
-//.generate-columns(10);
-//
-//.generate-columns(@n, @i: 1) when (@i =< @n) {
-//  .visible {
-//    .exp-list {
-//      &-item:nth-child(@{i}) {
-//        animation-delay: @i * @exp-list-animation-time;
-//      }
-//    }
-//
-//    .icons-list {
-//      &-item:nth-child(@{i}) {
-//        animation-delay: @i * @icons-list-animation-time;
-//      }
-//    }
-//  }
-//
-//  .generate-columns(@n, (@i + 1));
-//}

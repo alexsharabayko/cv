@@ -7,17 +7,15 @@ var HomePage = PageView.extend({
 
     handleSectionVisibleEvent: function (event) {
         var $items = dom(event.currentTarget).find('.fn-visible-item');
+        var counter = 0;
 
-        $items.map(dom).forEach(function ($item, i) {
-            $item.css({
-                'opacity': 1,
-                'transform': 'translate(0)',
-                '-webkit-transform': 'translate(0)',
-                'transition-delay': (0.2 * i) + 's',
-                '-webkit-transition-delay': (0.2 * i) + 's'
+        var interval = window.setInterval(function () {
+            $items.eq(counter++).addClass('visible');
 
-            });
-        });
+            if (counter === $items.length) {
+                window.clearInterval(interval);
+            }
+        }, 200);
     }
 });
 

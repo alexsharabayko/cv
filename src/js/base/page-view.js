@@ -70,6 +70,7 @@ var PageView = BaseView.extend({
 
     handleViewedSectionsPosition: function () {
         var $sections = this.viewedSections;
+        var viewedElems = [];
 
         $sections.forEach(function (el) {
             var windowHeight = window.innerHeight;
@@ -78,8 +79,12 @@ var PageView = BaseView.extend({
             if (elemPositionY > 0 && elemPositionY < windowHeight) {
                 dom(el).trigger('aboveWindow');
 
-                $sections.splice($sections.indexOf(el), 1);
+                viewedElems.push(el);
             }
+        }, this);
+
+        viewedElems.forEach(function (el) {
+            $sections.splice($sections.indexOf(el), 1);
         }, this);
     }
 });
