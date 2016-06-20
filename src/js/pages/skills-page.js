@@ -10,28 +10,26 @@ var SkillsPage = PageView.extend({
 
     circleProgresses: [],
 
-    initialize: function () {
-        PageView.prototype.initialize.apply(this, arguments);
-
-        this.listenToOnce(this, 'mounted', this.runProgresses.bind(this));
+    progressesMap: {
+        circle: CircleProgressBar,
+        linear: LinearProgressBar,
+        points: PointsProgressBar
     },
 
-    runProgresses: function () {
-        this.$('.fn-tech-skills-progress').forEach(function (el) {
-            var circleProgress = new CircleProgressBar({ el: el });
+    handleSectionVisibleEvent: function (event) {
+        var progresses = dom(event.target).find('.fn-progress');
 
-            circleProgress.start();
+        progresses.forEach(function (el) {
+            var progressKey = el.dataset.progress;
+            var ProgressClass = this.progressesMap[progressKey];
 
-            this.circleProgresses.push(circleProgress);
+            var progress = new ProgressClass({ el: el });
+            progress.start();
+
+            if (progressKey === 'circle') {
+                this.circleProgresses.push(progress);
+            }
         }, this);
-
-        this.$('.fn-language-skills-progress').forEach(function (el) {
-            (new LinearProgressBar({ el: el })).start();
-        });
-
-        this.$('.fn-tools-skills-progress').forEach(function (el) {
-            (new PointsProgressBar({ el: el })).start();
-        });
     },
 
     delegateEvents: function () {
