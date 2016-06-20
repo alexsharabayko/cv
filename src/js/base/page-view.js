@@ -5,11 +5,7 @@ var $pageContainer = dom('.page-container');
 
 var PageView = BaseView.extend({
     events: {
-        'aboveWindow .fn-section': 'goro'
-    },
-
-    goro: function (event) {
-        console.log(event.target);
+        'aboveWindow .fn-section': 'handleSectionVisibleEvent'
     },
 
     initialize: function () {

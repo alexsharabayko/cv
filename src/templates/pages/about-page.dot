@@ -28,7 +28,7 @@
             <i class="fa fa-graduation-cap exp-list-title_icon"></i>
 
             {{~it.education:edu}}
-            <li class="exp-list-item">
+            <li class="exp-list-item fn-visible-item">
                 <h3 class="exp-list-item__title">
                     <span class="exp-list-item__title__position">{{=edu.position}}</span>
                     &nbsp;-&nbsp;
@@ -55,7 +55,7 @@
             <i class="fa fa-briefcase exp-list-title_icon"></i>
 
             {{~it.expirience:exp}}
-            <li class="exp-list-item">
+            <li class="exp-list-item fn-visible-item">
                 <h3 class="exp-list-item__title">
                     <span class="exp-list-item__title__position">{{=exp.position}}</span>
                     &nbsp;-&nbsp;
@@ -80,7 +80,7 @@
 
         <ul class="icons-list">
             {{~it.services:service}}
-            <li class="icons-list-item">
+            <li class="icons-list-item fn-visible-item">
                 <i class="fa fa-{{=service.icon}} icons-list-item__icon"></i>
                 <h4 class="icons-list-item__title">{{=service.title}}</h4>
                 <p class="icons-list-item__description">{{=service.description}}</p>
@@ -94,7 +94,7 @@
 
         <ul class="icons-list">
             {{~it.hobbies:hobby}}
-            <li class="icons-list-item">
+            <li class="icons-list-item fn-visible-item">
                 <i class="fa fa-{{=hobby.icon}} icons-list-item__icon"></i>
                 <h4 class="icons-list-item__title">{{=hobby.title}}</h4>
                 <p class="icons-list-item__description">{{=hobby.description}}</p>

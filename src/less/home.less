@@ -62,9 +62,12 @@
   }
 }
 
+@exp-list-animation-time: 0.2s;
+
 .exp-list {
   position: relative;
   font-size: 1.6rem;
+  overflow: hidden;
 
   &-title_icon {
     position: relative;
@@ -82,6 +85,9 @@
     padding-left: 2rem;
     padding-top: 4rem;
     border-left: 0.3rem solid @gray;
+    opacity: 0;
+    transform: translate(200%, 0);
+    transition: all @icons-list-animation-time;
 
     &__title {
       position: relative;
@@ -120,6 +126,8 @@
   }
 }
 
+@icons-list-animation-time: 0.2s;
+
 .icons-list {
   text-align: center;
 
@@ -128,6 +136,13 @@
     width: 30%;
     margin-bottom: 3rem;
     vertical-align: top;
+    opacity: 0;
+    transform: translate(0, 200%);
+    transition: all @icons-list-animation-time;
+
+    &:hover {
+      transform: scale(1.2);
+    }
 
     @media @mobile {
       display: block;
@@ -163,3 +178,37 @@
     }
   }
 }
+
+//.visible {
+//  .exp-list {
+//    &-item {
+//      animation: fadeOnRightLeft @exp-list-animation-time ease-in-out forwards;
+//    }
+//  }
+//
+//  .icons-list {
+//    &-item {
+//      animation: fadeOnBottomTop @icons-list-animation-time ease-in-out forwards;
+//    }
+//  }
+//}
+//
+//.generate-columns(10);
+//
+//.generate-columns(@n, @i: 1) when (@i =< @n) {
+//  .visible {
+//    .exp-list {
+//      &-item:nth-child(@{i}) {
+//        animation-delay: @i * @exp-list-animation-time;
+//      }
+//    }
+//
+//    .icons-list {
+//      &-item:nth-child(@{i}) {
+//        animation-delay: @i * @icons-list-animation-time;
+//      }
+//    }
+//  }
+//
+//  .generate-columns(@n, (@i + 1));
+//}
