@@ -219,8 +219,7 @@ body {
     text-align: center;
     border-top: 1px solid @gray;
 
-    .download-cv,
-    .print-cv {
+    .download-cv {
       display: inline-block;
       padding: 1rem 0;
       margin: 0 2rem;
@@ -236,22 +235,6 @@ body {
     }
 
     .download-cv {
-      color: white;
-      background-color: @gray-black;
-      border-color: @gray-black;
-      transition: all 0.4s;
-
-      @media @mobile {
-        margin-bottom: 3rem;
-      }
-
-      &:hover {
-        background-color: @main-hover-color;
-        border-color: @main-hover-color;
-      }
-    }
-
-    .print-cv {
       position: relative;
       border-width: 0;
       border-bottom-width: 0.3rem;
