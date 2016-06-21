@@ -3,6 +3,7 @@
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
 
     output: {
         path: __dirname + '/public',
-        publicPath: '/',
+        //publicPath: '/',
         filename: 'init.js'
     },
 
@@ -25,10 +26,6 @@ module.exports = {
             {
                 test: /\.(ico|png|jpg|svg|ttf|eot|woff|woff2)$/i,
                 loader: 'file?name=[path]/[name].[ext]?[hash]'
-            },
-            {
-                test: /\.less$/,
-                loaders: ['style', 'css', 'autoprefixer', 'less']
             },
             {
                 test: /\.dot$/,
@@ -76,5 +73,20 @@ if (NODE_ENV == 'production') {
                 unsafe: true
             }
         })
+    );
+
+    module.exports.plugins.push(new ExtractTextPlugin("cv.css"));
+    module.exports.module.loaders.push(
+        {
+            test: /\.less$/,
+            loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
+        }
+    );
+} else {
+    module.exports.module.loaders.push(
+        {
+            test: /\.less$/,
+            loaders: ['style', 'css', 'autoprefixer', 'less']
+        }
     );
 }
