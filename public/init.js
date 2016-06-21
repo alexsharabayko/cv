@@ -5530,7 +5530,7 @@
 	        this.listenToOnce(this, 'mounted', function () {
 	            this.viewedSections = this.$('.fn-section').get();
 
-	            this.toggleEvents(true);
+	            this._toggleScrollEvents(true);
 
 	            this.handleViewedSectionsPosition();
 	        }.bind(this));
@@ -5541,7 +5541,7 @@
 
 	        this.delegateEvents();
 
-	        this._triggerMountedEvent();
+	        this._triggerMountedEventIfNeed();
 	    },
 
 	    remove: function () {
@@ -5550,7 +5550,7 @@
 	        this.undelegateEvents();
 	    },
 
-	    _triggerMountedEvent: function () {
+	    _triggerMountedEventIfNeed: function () {
 	        if (this._rendered) {
 	            this._mounted = true;
 
@@ -5567,16 +5567,16 @@
 	    delegateEvents: function () {
 	        BaseView.prototype.delegateEvents.apply(this, arguments);
 
-	        this.toggleEvents(true);
+	        this._toggleScrollEvents(true);
 	    },
 
 	    undelegateEvents: function () {
 	        BaseView.prototype.undelegateEvents.apply(this, arguments);
 
-	        this.toggleEvents(false);
+	        this._toggleScrollEvents(false);
 	    },
 
-	    toggleEvents: function (flag) {
+	    _toggleScrollEvents: function (flag) {
 	        if (this._mounted && this.viewedSections.length) {
 	            dom(window)[flag ? 'on' : 'off']('scroll' + '.scroll' + this.cid, this.handleViewedSectionsPosition.bind(this));
 	        }

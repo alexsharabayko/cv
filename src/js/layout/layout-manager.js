@@ -2,14 +2,36 @@ var dom = require('lib/dom');
 var MainHeader = require('layout/main-header');
 var MainFooter = require('layout/main-footer');
 
-var mainHeader = new MainHeader();
-var mainFooter = new MainFooter();
+/**
+ * Layout manager constructor
+ *
+ * Add layout elements to html
+ *
+ * @constructor
+ */
+var LayoutManager = function () {
+    var elems = this.elements;
 
-dom('.fn-main-header').append(mainHeader.el);
-dom('.fn-main-footer').append(mainFooter.el);
+    dom('.fn-main-header').append(elems.mainHeader.el);
+    dom('.fn-main-footer').append(elems.mainFooter.el);
+};
 
-module.exports = {
+LayoutManager.prototype = {
+    /**
+     * Layout elements links
+     */
+    elements: {
+        mainHeader: new MainHeader(),
+        mainFooter: new MainFooter()
+    },
+
+    /**
+     * Update main header nav by path
+     * @param path {String} - history pathname
+     */
     updateMainNav: function (path) {
-        mainHeader.updateNav(path);
+        this.elements.mainHeader.updateNav(path);
     }
 };
+
+module.exports = new LayoutManager();

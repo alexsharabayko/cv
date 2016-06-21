@@ -1,7 +1,13 @@
 var BaseView = require('base/base-view');
 var mvc = require('lib/mvc');
 
+/**
+ * @constructor
+ */
 var MainHeader = BaseView.extend({
+    /**
+     * @override
+     */
     template: 'layout/main-header',
     url: 'data/about.json',
 
@@ -13,12 +19,20 @@ var MainHeader = BaseView.extend({
         this.renderAfterFetch();
     },
 
+    /**
+     * Nivigate by backbone history
+     * @param event {Event}
+     */
     navigate: function (event) {
         event.preventDefault();
 
         mvc.history.navigate(event.currentTarget.getAttribute('href'), true);
     },
 
+    /**
+     * Set nav active class by path if need
+     * @param path
+     */
     updateNav: function (path) {
         if (this._rendered) {
             this.setNavActiveClass(path);
@@ -27,6 +41,10 @@ var MainHeader = BaseView.extend({
         }
     },
 
+    /**
+     * Set nav active class
+     * @param path
+     */
     setNavActiveClass: function (path) {
         var target = this.$('.fn-nav-item').filter(function (el) {
             return el.getAttribute('href').substr(1) === path;

@@ -4,10 +4,19 @@ var CircleProgressBar = require('tools/progress-bar/circle');
 var LinearProgressBar = require('tools/progress-bar/linear');
 var PointsProgressBar = require('tools/progress-bar/points');
 
+/**
+ * @constructor
+ */
 var SkillsPage = PageView.extend({
+    /**
+     * @override
+     */
     template: 'pages/skills-page',
     url: 'data/skills.json',
 
+    /**
+     * Circle progress cache (for listening resize)
+     */
     circleProgresses: [],
 
     progressesMap: {
@@ -16,6 +25,13 @@ var SkillsPage = PageView.extend({
         points: PointsProgressBar
     },
 
+    /**
+     * Start progresses of section
+     * Cache circle progresses
+     *
+     * @override
+     * @param event {Event}
+     */
     handleSectionVisibleEvent: function (event) {
         var progresses = dom(event.target).find('.fn-progress');
 
@@ -26,12 +42,17 @@ var SkillsPage = PageView.extend({
             var progress = new ProgressClass({ el: el });
             progress.start();
 
+            //Cache circle progresses for resize events
             if (progressKey === 'circle') {
                 this.circleProgresses.push(progress);
             }
         }, this);
     },
 
+    /**
+     * Resize circle canvas on window resize
+     * @override
+     */
     delegateEvents: function () {
         PageView.prototype.delegateEvents.apply(this, arguments);
 
@@ -42,6 +63,9 @@ var SkillsPage = PageView.extend({
         }.bind(this));
     },
 
+    /**
+     * @override
+     */
     undelegateEvents: function () {
         PageView.prototype.undelegateEvents.apply(this, arguments);
 

@@ -1,8 +1,22 @@
 var mvc = require('lib/mvc');
 
+/**
+ * @constructor
+ * @extend Backbone View
+ */
 var BaseView = mvc.View.extend({
+    /**
+     * Parameters for 'renderAfterFetch' method
+     * template {String} - template name
+     * url {String} - data url
+     */
     template: null,
     url: null,
+
+    /**
+     * Rendered flag
+     */
+    _rendered: false,
 
     /**
      * Return DoT template by template name or only template name
@@ -18,11 +32,20 @@ var BaseView = mvc.View.extend({
         }, data);
     },
 
+    /**
+     * Get data from url and after it render template with received data
+     *
+     * @returns {Promise}
+     */
     renderAfterFetch: function () {
         this._rendered = false;
 
-        this.$el.html('<span class="loading">Loading</span>');
+        // Show loading (spinner maybe)
+        this.showLoadingContent();
 
+        /**
+         * Fetch, transform data to object, render
+         */
         return window.fetch(this.url)
             .then(function (response) {
                 return response.json();
@@ -33,6 +56,13 @@ var BaseView = mvc.View.extend({
                 this.trigger('rendered');
                 this._rendered = true;
             }.bind(this));
+    },
+
+    /**
+     * Render loading content
+     */
+    showLoadingContent: function () {
+        this.$el.html('<span class="loading">Loading</span>');
     }
 });
 
