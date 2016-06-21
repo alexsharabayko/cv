@@ -1,0 +1,8 @@
+<a href="{{=it.textResumeLink}}" class="download-cv">
+    <i class="fa fa-download"></i>
+    <span>Download cv</span>
+</a>
+<a href="#" class="print-cv">
+    <i class="fa fa-print"></i>
+    <span>Print cv</span>
+</a>
