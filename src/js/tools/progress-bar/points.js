@@ -1,10 +1,19 @@
 var BaseProgressBar = require('base/progress-bar');
 
 var LinearProgressBar = BaseProgressBar.extend({
+    /**
+     * @override
+     */
     template: '<li class="tools-skills-progress__item fn-item"></li>',
 
+    /**
+     * Total length of circles
+     */
     totalLength: 10,
 
+    /**
+     * @override
+     */
     defaultOptions: {
         percent: 33,
         color: 'black',
@@ -13,6 +22,9 @@ var LinearProgressBar = BaseProgressBar.extend({
         animationFunction: 'linear'
     },
 
+    /**
+     * @override
+     */
     render: function () {
         var html = '';
 
@@ -23,10 +35,16 @@ var LinearProgressBar = BaseProgressBar.extend({
         this.$el.html(html);
     },
 
+    /**
+     * @override
+     */
     setElements: function () {
         this.$items = this.$('.fn-item');
     },
 
+    /**
+     * @override
+     */
     setElementsView: function () {
         var options = this.options;
 
@@ -36,6 +54,9 @@ var LinearProgressBar = BaseProgressBar.extend({
         });
     },
 
+    /**
+     * @override
+     */
     start: function () {
         var options = this.options;
         var length = Math.round(options.percent / 10);

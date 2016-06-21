@@ -4,8 +4,14 @@ var BaseProgressBar = require('base/progress-bar');
  * @constructor
  */
 var CircleProgressBar = BaseProgressBar.extend({
+    /**
+     * @override
+     */
     template: '<canvas></canvas><span class="text"></span>',
 
+    /**
+     * @override
+     */
     defaultOptions: {
         percent: 33,
         color: 'black',
@@ -17,6 +23,9 @@ var CircleProgressBar = BaseProgressBar.extend({
         duration: 1000
     },
 
+    /**
+     * @override
+     */
     setElements: function () {
         this.canvas = this.el.querySelector('canvas');
         this.ctx = this.canvas.getContext('2d');
@@ -24,7 +33,11 @@ var CircleProgressBar = BaseProgressBar.extend({
         this.$text = this.$el.find('.text');
     },
 
+    /**
+     * @override
+     */
     setElementsView: function () {
+        //Set canvas size by element width
         this.options.size = this.el.clientWidth;
 
         this.canvas.width = this.canvas.height = this.options.size;
@@ -49,6 +62,9 @@ var CircleProgressBar = BaseProgressBar.extend({
         });
     },
 
+    /**
+     * @override
+     */
     start: function () {
         var interval = this.options.duration / this.options.percent;
         var currentPercent = 1;
@@ -56,6 +72,12 @@ var CircleProgressBar = BaseProgressBar.extend({
         window.setTimeout(this.ticker.bind(this, interval, currentPercent), interval);
     },
 
+    /**
+     * Interval for drawing circle by value
+     *
+     * @param interval {Integer}
+     * @param currentPercent {Integer}
+     */
     ticker: function (interval, currentPercent) {
         this.drawCircle(currentPercent++);
 
@@ -64,6 +86,10 @@ var CircleProgressBar = BaseProgressBar.extend({
         }
     },
 
+    /**
+     * Draw circle by current percent
+     * @param percent {Integer}
+     */
     drawCircle: function (percent) {
         var options = this.options;
         var canvas = this.canvas;
@@ -71,6 +97,7 @@ var CircleProgressBar = BaseProgressBar.extend({
 
         ctx.putImageData(this.imageData, 0, 0);
 
+        //Draw background arc
         ctx.beginPath();
         ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2, false);
         ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
@@ -79,6 +106,7 @@ var CircleProgressBar = BaseProgressBar.extend({
         ctx.stroke();
         ctx.closePath();
 
+        //Draw main arc (by percent)
         ctx.beginPath();
         ctx.arc(0, 0, (options.size - options.lineWidth) / 2, 0, Math.PI * 2 * percent / 100, false);
         ctx.strokeStyle = options.color;
@@ -87,9 +115,13 @@ var CircleProgressBar = BaseProgressBar.extend({
         ctx.stroke();
         ctx.closePath();
 
+        //Set percent to text
         this.$text.html(percent + '%');
     },
 
+    /**
+     * Refreshing
+     */
     refreshOnResize: function () {
         this.setElementsView();
         this.drawCircle(this.options.percent);

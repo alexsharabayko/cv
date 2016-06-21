@@ -1,8 +1,19 @@
 var BaseProgressBar = require('base/progress-bar');
 
+var MILLISECONDS_IN_SECONDS = 1000;
+
+/**
+ * @constructor
+ */
 var LinearProgressBar = BaseProgressBar.extend({
+    /**
+     * @override
+     */
     template: '<span class="language-skills-progress__bar fn-bar"></span>',
 
+    /**
+     * @override
+     */
     defaultOptions: {
         percent: 33,
         color: 'black',
@@ -10,10 +21,16 @@ var LinearProgressBar = BaseProgressBar.extend({
         animationFunction: 'linear'
     },
 
+    /**
+     * @override
+     */
     setElements: function () {
         this.$bar = this.$('.fn-bar');
     },
 
+    /**
+     * @override
+     */
     setElementsView: function () {
         var options = this.options;
 
@@ -31,11 +48,14 @@ var LinearProgressBar = BaseProgressBar.extend({
             height: '100%',
             width: 0,
             'background-color': options.color,
-            'transition': 'width ' + (options.duration / 1000) + 's ' + options.animationFunction,
-            '-webkit-transition': 'width ' + (options.duration / 1000) + 's ' + options.animationFunction
+            'transition': 'width ' + (options.duration / MILLISECONDS_IN_SECONDS) + 's ' + options.animationFunction,
+            '-webkit-transition': 'width ' + (options.duration / MILLISECONDS_IN_SECONDS) + 's ' + options.animationFunction
         });
     },
 
+    /**
+     * @override
+     */
     start: function () {
         window.setTimeout(function () {
             this.$bar.css('width', this.options.percent + '%');
