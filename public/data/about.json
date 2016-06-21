@@ -23,19 +23,25 @@
         "title": "Email",
         "value": "alexsharabayko@gmail.com",
         "contact": true,
-        "contactIcon": "envelope"
+        "contactIcon": "envelope",
+        "isLink": true,
+        "linkType": "mailto:"
       },
       {
         "title": "Phone",
         "value": "+375292120592",
         "contact": true,
-        "contactIcon": "phone"
+        "contactIcon": "phone",
+        "isLink": true,
+        "linkType": "tel:"
       },
       {
         "title": "Skype",
         "value": "alexandr.sharabayko",
         "contact": true,
-        "contactIcon": "skype"
+        "contactIcon": "skype",
+        "isLink": true,
+        "linkType": "skype:"
       }
     ]
   },

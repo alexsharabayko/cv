@@ -14,9 +14,15 @@
 
         {{~contacts:contact}}
         <div class="contact-info">
+            {{?contact.isLink}}
+            <a href="{{=contact.linkType || ''}}{{=contact.value}}" class="contact-info-icon link">
+                <i class="fa fa-{{=contact.contactIcon}}"></i>
+            </a>
+            {{??}}
             <span class="contact-info-icon">
                 <i class="fa fa-{{=contact.contactIcon}}"></i>
             </span>
+            {{?}}
 
             <h5 class="contact-info-text">{{=contact.value}}</h5>
         </div>

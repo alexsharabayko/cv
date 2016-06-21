@@ -1,10 +1,10 @@
 <div class="page about-page">
-    <section class="section who_i_am">
+    <section class="section who_i_am fn-section">
         <h1 class="section-title">Portfolio</h1>
 
         <ul class="portfolio-list">
             {{~it.projects:project}}
-            <li class="portfolio-list-item">
+            <li class="portfolio-list-item fn-item">
                 <img class="portfolio-list-item__img" src="{{=project.img}}" alt="portfolio"/>
 
 

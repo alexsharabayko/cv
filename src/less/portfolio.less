@@ -4,11 +4,12 @@
   text-align: center;
 
   &-item {
-    position: relative;
     display: inline-block;
+    position: relative;
     margin: 0 1rem 2rem;
     width: 30%;
-    transition: all @portfolio-time;
+    opacity: 0;
+    transition: all @portfolio-time * 1.5;
 
     @media @mobile {
       display: block;
@@ -64,6 +65,10 @@
         animation: bottomToTop @portfolio-time forwards;
         animation-delay: @portfolio-time * 2;
       }
+    }
+
+    &.visible {
+      animation: fadeIn @portfolio-time forwards;
     }
 
     &:hover {

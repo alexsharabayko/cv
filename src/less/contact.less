@@ -1,3 +1,5 @@
+@contact-time: 0.3s;
+
 .contact-map {
   position: relative;
   padding-top: 60%;
@@ -29,6 +31,15 @@
     text-align: center;
     background-color: @main-hover-color;
     border-radius: 50%;
+
+    &.link {
+      transition: all @contact-time;
+
+      &:hover {
+        background-color: @gray-black;
+        transform: translate(-50%, -60%);
+      }
+    }
   }
 
   &-text {
