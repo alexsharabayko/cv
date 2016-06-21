@@ -40,6 +40,8 @@ var PageView = BaseView.extend({
 
     _triggerMountedEvent: function () {
         if (this._rendered) {
+            this._mounted = true;
+
             this.trigger('mounted');
         } else {
             this.listenToOnce(this, 'rendered', function () {
