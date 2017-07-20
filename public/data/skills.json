@@ -4,7 +4,7 @@
       "title": "JavaScript",
       "level": 95,
       "description": "Majority of my experience consist of writing javascript code. I have experience both in vanilla js and in most popular javascript fraemworks and libraries.",
-      "keywords": "Vanilla JS, Backbone JS, React JS, Angular JS, jQuery, Underscore"
+      "keywords": "Vanilla JS, Backbone JS, React JS, Angular, jQuery, Underscore"
     },
     {
       "title": "HTML",
@@ -22,7 +22,7 @@
       "title": "Node JS",
       "level": 60,
       "description": "There is a big experience in developing server side applications using Node js. For example: rest web services, authentification and registartion module and so on. Also there is experience in work with NoSQL databases such as Mongo db.",
-      "keywords": "Node, Node express, Mongo DB, Mongoose, Webpack, Gulp, NWJS"
+      "keywords": "Node, Node express, Mongo DB, Mongoose, Webpack, Gulp, NWJS, Electron"
     },
     {
       "title": "Other languages",

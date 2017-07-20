@@ -3,7 +3,7 @@
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -19,17 +19,17 @@ module.exports = {
         filename: 'init.js'
     },
 
-    devtool: NODE_ENV === 'development' ? "cheap-inline-module-source-map" : null,
+    devtool: NODE_ENV === 'development' ? "cheap-inline-module-source-map" : false,
 
     module: {
         loaders: [
             {
                 test: /\.(ico|png|jpg|svg|ttf|eot|woff|woff2)$/i,
-                loader: 'file?name=[path]/[name].[ext]?[hash]'
+                loader: 'file-loader?name=[path]/[name].[ext]?[hash]'
             },
             {
                 test: /\.dot$/,
-                loader: "dot"
+                loader: "dot-loader"
             }
         ]
     },
@@ -42,29 +42,28 @@ module.exports = {
     ],
 
     resolve: {
-        modulesDirectories: ['js', 'src', 'node_modules'],
-        extensions: ['', '.js', '.less'],
+        modules: ['js', 'src', 'node_modules'],
+        extensions: ['.js', '.less'],
         alias: {
             'jquery': 'jbone'
         }
     },
 
     resolveLoader: {
-        modulesDirectories: ['node_modules'],
-        moduleTemplates: ['*-loader', '*'],
-        extensions: ['', '.js', '.less']
+        modules: ['node_modules'],
+        extensions: ['.js', '.less']
     },
 
     devServer: {
         host: 'localhost',
-        port: 4444,
+        port: 5555,
         contentBase: __dirname + '/public',
         hot: true,
         historyApiFallback: true
     }
 };
 
-if (NODE_ENV == 'production') {
+if (NODE_ENV === 'production') {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -79,14 +78,14 @@ if (NODE_ENV == 'production') {
     module.exports.module.loaders.push(
         {
             test: /\.less$/,
-            loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer-loader!less-loader')
         }
     );
 } else {
     module.exports.module.loaders.push(
         {
             test: /\.less$/,
-            loaders: ['style', 'css', 'autoprefixer', 'less']
+            loaders: ['style-loader', 'css-loader', 'autoprefixer-loader', 'less-loader']
         }
     );
 }

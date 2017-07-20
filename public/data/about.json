@@ -67,6 +67,13 @@
   "expirience": [
     {
       "position": "Frontend Developer",
+      "place": "Synesis",
+      "startDate": "Feb 2017",
+      "endDate": "current",
+      "description": "I took part in developing of big single page application, solved architect problems."
+    },
+    {
+      "position": "Frontend Developer",
       "place": "Viaden Media / Skywind Tech By",
       "startDate": "Sep 2014",
       "endDate": "current",
